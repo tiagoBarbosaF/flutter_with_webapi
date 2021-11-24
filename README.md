@@ -23,6 +23,9 @@
 - Implementando a tela de transferências
 - Para saber mais - Validando argumentos do construtor com assert
 - O que aprendi?
+    - A utilizar o row para estruturar Widgets no modo horizontal;
+    - Como utilizar funções de callback para delegar comportamentos de eventos;
+    - Como indicar que o argumento é obrigatório mesmo sendo opcional.
 
 ### Realizando comunicação http
 - Configurando o ambiente da web api
@@ -34,6 +37,10 @@
 - Configurando o logging interceptor
 - Para saber mais – Acessando a web API local via endereço público
 - O que aprendi?
+    - Executar uma web API do Spring Boot;
+    - Testar a web API com o Postman;
+    - Configurar e usar o package http do Dart;
+    - Realizar uma requisição GET do http no Flutter.
 
 ### Apresentando dados da web api na tela do App
 - Convertendo json para objeto do Dart
@@ -44,6 +51,9 @@
 - Evitando problemas com a web api
 - Para saber mais – Outros problemas comuns com comunicação HTTP
 - O que aprendi?
+    - Converter json para objeto do Dart;
+    - Apresentar dados da web api com o FutureBuilder;
+    - Exibir um feedback adequado para situações excepcionais.
 
 ### Enviando transferência para Web API
 - Salvando transferências

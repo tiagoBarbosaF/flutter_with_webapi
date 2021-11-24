@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mybank/components/progress.dart';
 import 'package:mybank/database/dao/contact_dao.dart';
 import 'package:mybank/models/contact.dart';
 import 'package:mybank/screens/contact_form.dart';
@@ -27,24 +28,7 @@ class _ContactListState extends State<ContactList> {
             case ConnectionState.none:
               break;
             case ConnectionState.waiting:
-              return Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    CircularProgressIndicator(
-                      strokeWidth: 5.0,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 24.0),
-                      child: Text(
-                        'Loading',
-                        style: TextStyle(fontSize: 24.0),
-                      ),
-                    ),
-                  ],
-                ),
-              );
+              return const Progress();
             case ConnectionState.active:
               break;
             case ConnectionState.done:
