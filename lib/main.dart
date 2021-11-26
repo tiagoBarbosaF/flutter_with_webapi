@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mybank/http/webclient.dart';
 
 import 'screens/dashboard.dart';
 
 void main() {
   runApp(const MyBankApp());
-  findAll().then((transactions) => print('new transactions $transactions'));
 }
 
 class MyBankApp extends StatelessWidget {

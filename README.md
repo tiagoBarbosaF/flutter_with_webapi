@@ -1,5 +1,7 @@
 # Flutter com web API
 
+> Para uso do webApi de exemplo, vá a pasta **WebApiStudies** e no arquivo README tem toda a descrição de utilização.
+
 ## Objetivos ao completar os estudos
 - Implemente callbacks personalizados
 - Consuma uma web api com o package do http
@@ -62,6 +64,9 @@
 - Salvando transferência pelo formulário
 - Para saber mais – Outros comportamentos do HTTP
 - O que aprendi?
+    - Implementar a requisição post para o HTTP;
+    - Salvar uma transferência na web api;
+    - Converter objeto Dart para JSON.
 
 ### Melhorando o webclient
 - Organizando o código do web client
@@ -73,3 +78,14 @@
 - Conclusão
 - Projeto final
 - O que aprendi?
+    - Organizar o código do web client;
+    - Simplificar a conversão entre objetos e JSON;
+    - Utilizar a função map() para converter uma lista.
+
+***
+
+## Flutter project screens - myBank App
+<img src="assets/img/screen01.png" width="200">
+<img src="assets/img/screen02.png" width="200">
+<img src="assets/img/screen03.png" width="200">
+<img src="assets/img/screen04.png" width="200">

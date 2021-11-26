@@ -8,9 +8,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dashboard'),
-      ),
+      appBar: AppBar(title: const Text('Dashboard')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,19 +22,12 @@ class Dashboard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-                  Icon(
-                    Icons.verified_user,
-                    color: Colors.white,
-                    size: 80.0,
-                  ),
-                  Text(
-                    'myBank',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 90.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
+                  Icon(Icons.verified_user, color: Colors.white, size: 80.0),
+                  Text('myBank',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 90.0,
+                          fontWeight: FontWeight.bold))
                 ],
               ),
             ),
@@ -45,16 +36,10 @@ class Dashboard extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                _FeatureItem(
-                  'Transfer',
-                  Icons.monetization_on,
-                  onClick: () => _showContactList(context),
-                ),
-                _FeatureItem(
-                  'Transaction Feed',
-                  Icons.description,
-                  onClick: () => _showTransactionsList(context),
-                ),
+                _FeatureItem('Transfer', Icons.monetization_on,
+                    onClick: () => _showContactList(context)),
+                _FeatureItem('Transaction Feed', Icons.description,
+                    onClick: () => _showTransactionsList(context)),
               ],
             ),
           ),
@@ -74,7 +59,7 @@ class Dashboard extends StatelessWidget {
   _showTransactionsList(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const TransactionsList(),
+        builder: (context) => TransactionsList(),
       ),
     );
   }
@@ -103,19 +88,12 @@ class _FeatureItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
-                  icon,
-                  color: Colors.white,
-                  size: 30.0,
-                ),
-                Text(
-                  name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Icon(icon, color: Colors.white, size: 30.0),
+                Text(name,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold)),
               ],
             ),
           ),

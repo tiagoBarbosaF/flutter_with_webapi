@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mybank/components/centered_message.dart';
 import 'package:mybank/components/progress.dart';
-import 'package:mybank/http/webclient.dart';
+import 'package:mybank/http/webclients/transaction_webclient.dart';
 import 'package:mybank/models/transaction.dart';
 
 class TransactionsList extends StatelessWidget {
-  const TransactionsList({Key? key}) : super(key: key);
+  final TransactionWebClient _webClient = TransactionWebClient();
+
+  TransactionsList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +16,14 @@ class TransactionsList extends StatelessWidget {
         title: const Text('Transactions'),
       ),
       body: FutureBuilder<List<Transaction>>(
-        future: findAll(),
+        future: _webClient.findAll(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.none:
               break;
             case ConnectionState.waiting:
               return const Progress();
+              // ignore: dead_code
               break;
             case ConnectionState.active:
               break;
@@ -59,6 +62,7 @@ class TransactionsList extends StatelessWidget {
                 'No transaction found',
                 icon: Icons.warning_amber_rounded,
               );
+              // ignore: dead_code
               break;
           }
           return const CenteredMessage('Unknow error');
